@@ -13,5 +13,6 @@ $factory->define(Organisation::class, function (Faker $faker) {
         'name' => $faker->company,
         'subscribed' => $subbed,
         'trial_end' => !$subbed ? \Carbon\Carbon::now()->addDays(30) : null,
+        'owner_user_id' => 1,
     ];
 });
